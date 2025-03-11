@@ -1,0 +1,90 @@
+derby download link:- 
+==============================================================
+  https://db.apache.org/derby/releases/release-10_14_2_0.html
+  
+=============================================================
+
+hive download link:-
+============================================================
+  https://archive.apache.org/dist/hive/hive-3.1.2/
+
+(download the '266 mb' file)
+=============================================================
+
+
+ download the hive-site-xml file :-
+
+  https://drive.google.com/file/d/1_h8dN46KK8zZf9yf2M2DBUfPR_IZl33T/view
+
+==============================================================
+
+
+hive-site-xml changeable code
+===============================================================
+
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+
+    <property>
+        <name>javax.jdo.option.ConnectionURL</name>
+        <value>jdbc:derby://localhost:1527/metastore_db2;create=true</value>
+        <description>JDBC connect string for a JDBC metastore</description>
+    </property>
+
+    <property>
+        <name>system:java.io.tmpdir</name>
+        <value>C:/hive/tmp</value>
+    </property>
+
+    <property>
+        <name>system:user.name</name>
+        <value>${user.name}</value>
+    </property>
+
+    <property>
+        <name>javax.jdo.option.ConnectionDriverName</name>
+        <value>org.apache.derby.jdbc.ClientDriver</value>
+        <description>Driver class name for a JDBC metastore</description>
+    </property>
+
+    <property>
+        <name>hive.metastore.warehouse.dir</name>
+        <value>/user/hive/warehouse</value>
+        <description>Location of default database for the warehouse</description>
+    </property>
+
+    <property>
+        <name>hive.server2.enable.doAS</name>
+        <value>true</value>
+        <description>Enable user impersonation for HiveServer2</description>
+    </property>
+
+    <property>
+        <name>hive.server2.authentication</name>
+        <value>NONE</value>
+        <description>Client authentication types. NONE: no authentication check, LDAP: LDAP/AD based authentication, KERBEROS: Kerberos/GSSAPI authentication, CUSTOM: Custom authentication provider (Use with property hive.server2.custom.authentication.class)</description>
+    </property>
+
+    <property>
+        <name>datanucleus.autoCreateTables</name>
+        <value>true</value>
+        <description>Auto-create tables in the metastore</description>
+    </property>
+
+    <property>
+        <name>hadoop.home.dir</name>
+        <value>C:/hadoop</value>
+    </property>
+
+</configuration>  
+
+=============================================================================================================
+
+ Hive Commands to create, alter, and drop databases, tables, views, functions, and indexes :
+
+
+https://sonu-tyagi.medium.com/hive-commands-complete-beginners-guide-6ff38e519bc1
+
+
+====================================================================================================
